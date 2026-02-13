@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galentine Invite</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      color: #fff;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      text-shadow: 2px 2px #ff6f91;
+    }
+    p {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+      text-shadow: 1px 1px #ff6f91;
+    }
+    .heart {
+      font-size: 4em;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    .button {
+      background-color: #ff6f91;
+      color: white;
+      border: none;
+      padding: 1em 2em;
+      font-size: 1.2em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      text-decoration: none;
+      margin: 0.5em;
+    }
+    .button:hover {
+      transform: scale(1.1);
+      background-color: #ff4b69;
+    }
+    #yesMessage {
+      display: none;
+      font-size: 2em;
+      margin-top: 1em;
+      animation: appear 0.5s ease forwards;
+    }
+    @keyframes appear {
+      from { opacity: 0; transform: scale(0.5);}
+      to { opacity: 1; transform: scale(1);}
+    }
+  </style>
+</head>
+<body>
+  <h1>💖 Will You Be My Galentine? 💖</h1>
+  <p class="heart">💘💘💘</p>
+  <p>Hey trisha, I thought you should know…</p>
+  <p>You're amazing and I'd love to celebrate Galentine's Day with you!</p>
+
+  <button class="button" onclick="sayYes()">Yes! 🎉</button>
+  <button class="button" onclick="sayNo()">No 😢</button>
+
+  <p id="yesMessage">Yay! Can’t wait to celebrate! 💖🎉</p>
+  <p id="noMessage">Aww, maybe next time! 💔</p>
+
+  <script>
+    function sayYes() {
+      document.getElementById('yesMessage').style.display = 'block';
+      document.getElementById('noMessage').style.display = 'none';
+    }
+    function sayNo() {
+      document.getElementById('noMessage').style.display = 'block';
+      document.getElementById('yesMessage').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
